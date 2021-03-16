@@ -1,8 +1,9 @@
+from datetime import datetime
 import pandas as pd
 
 import urllib
 from sqlalchemy import create_engine
-
+from datetime import datetime
 
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -30,6 +31,7 @@ def run_query():
     df=pd.read_sql(f"SELECT * FROM {DB_TABLE}",DB_CONN)
 
     df['double']=df.iloc[:,1]
+    df['create2']=datetime.now()
 
     df.to_sql('DATATEST',DB_CONN,index=False,if_exists='replace')
 
