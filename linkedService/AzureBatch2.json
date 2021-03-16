@@ -1,0 +1,18 @@
+{
+	"name": "AzureBatch2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBatch",
+		"typeProperties": {
+			"accountName": "rom",
+			"batchUri": "https://aroma.uksouth.batch.azure.com",
+			"poolName": "aroma",
+			"linkedServiceName": {
+				"referenceName": "AzureBlobStorage2",
+				"type": "LinkedServiceReference"
+			},
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFST01BX2JlYTY1ODRjLTI1ZTEtNDA0NC05MTRiLTU3YTI0YmE0N2E2OSINCn0="
+		}
+	}
+}
