@@ -35,6 +35,8 @@ def run_query():
 
     df.to_sql('DATATEST',DB_CONN,index=False,if_exists='replace')
 
+    return df
+
 
 if __name__ == "__main__":
     # execute only if run as a script
